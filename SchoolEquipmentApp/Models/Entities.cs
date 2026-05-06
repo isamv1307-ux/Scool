@@ -1,0 +1,6 @@
+namespace SchoolEquipmentApp.Models;
+public class User { public int UserID { get; set; } public string Login { get; set; } = ""; public string Password { get; set; } = ""; public string FullName { get; set; } = ""; }
+public class Employee { public int EmployeeID { get; set; } public string FullName { get; set; } = ""; public string? Position { get; set; } public string? Department { get; set; } public string? Phone { get; set; } }
+public class Equipment { public int EquipmentID { get; set; } public string Name { get; set; } = ""; public string? Type { get; set; } public string InventoryNumber { get; set; } = ""; public DateTime? PurchaseDate { get; set; } public string? Status { get; set; } public string? Location { get; set; } public int? EmployeeID { get; set; } }
+public class Component { public int ComponentID { get; set; } public string Name { get; set; } = ""; public string? Type { get; set; } public int Quantity { get; set; } public string? Unit { get; set; } public decimal Price { get; set; } public string? Note { get; set; } }
+public class Issuance { public int IssuanceID { get; set; } public int EmployeeID { get; set; } public int EquipmentID { get; set; } public DateTime IssueDate { get; set; } public DateTime? ReturnDate { get; set; } public string? IssuanceStatus { get; set; } public string? Comment { get; set; } }

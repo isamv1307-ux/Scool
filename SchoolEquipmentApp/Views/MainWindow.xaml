@@ -1,0 +1,11 @@
+<Window x:Class="SchoolEquipmentApp.Views.MainWindow" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" Title="Главное окно" Width="1200" Height="760" WindowStartupLocation="CenterScreen">
+<Grid><Grid.RowDefinitions><RowDefinition Height="90"/><RowDefinition/></Grid.RowDefinitions><Grid.ColumnDefinitions><ColumnDefinition Width="230"/><ColumnDefinition/></Grid.ColumnDefinitions>
+<Border Grid.ColumnSpan="2" Background="#1F3A5F"><DockPanel Margin="16"><TextBlock Text="🎓" FontSize="40" Foreground="White"/><StackPanel Margin="12,0,0,0"><TextBlock Text="МБОУ СОШ № 6 им. Сирина Н.И." Foreground="White" FontSize="20" FontWeight="Bold"/><TextBlock Text="Система учета организационной техники и комплектующих" Foreground="White"/></StackPanel><StackPanel HorizontalAlignment="Right"><TextBlock x:Name="UserText" Foreground="White" FontWeight="Bold"/><Button Content="Выход" Click="Exit_Click"/></StackPanel></DockPanel></Border>
+<StackPanel Grid.Row="1" Background="#203A5A" Padding="8">
+<Button Content="🏠 Главная"/><Button Content="💻 Техника" Click="Equipment_Click"/><Button Content="🔩 Комплектующие" Click="Components_Click"/><Button Content="👥 Сотрудники" Click="Employees_Click"/><Button Content="📦 Выдача техники" Click="Issuance_Click"/><Button Content="📊 Отчеты" Click="Reports_Click"/><Button Content="🚪 Выход" Click="Exit_Click"/>
+</StackPanel>
+<Grid Grid.Row="1" Grid.Column="1" Margin="16"><Grid.RowDefinitions><RowDefinition Height="2*"/><RowDefinition/></Grid.RowDefinitions>
+<Border CornerRadius="12" Background="White" Padding="20"><StackPanel><TextBlock Text="🏫" FontSize="80" HorizontalAlignment="Center"/><TextBlock TextWrapping="Wrap" Text="Информационная система предназначена для автоматизации учета организационной техники и комплектующих в МБОУ СОШ № 6 им. Сирина Н.И. Система позволяет хранить сведения о технике, контролировать ее состояние, фиксировать выдачу оборудования сотрудникам, учитывать комплектующие и формировать отчетную информацию."/></StackPanel></Border>
+<UniformGrid Grid.Row="1" Columns="5" Margin="0,10,0,0">
+<TextBlock x:Name="TotalEq"/><TextBlock x:Name="OkEq"/><TextBlock x:Name="RepairEq"/><TextBlock x:Name="WriteOffEq"/><TextBlock x:Name="TotalComp"/>
+</UniformGrid></Grid></Grid></Window>
